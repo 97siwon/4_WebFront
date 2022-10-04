@@ -105,3 +105,43 @@ input[name='fruits']:checked{
 
 /* A 다음에 오는 모든 B 요소 선택 (~) */
 #div3 ~ div{ background-color: chocolate; }
+
+
+/* checkbox 모양 바꾸기 */
+
+/* label 태그 스타일 지정 */
+.chk + label{
+    width: 30px;
+    height: 30px;
+    border: 1px solid #ccc;
+
+    /* label은 기본적으로 inline 형식 -> 크기 조정 X 
+       그래서 형식 변경을 진행
+    */
+
+    display: inline-block; /* 수평 분할 + 크기 조정 O */
+
+    cursor: pointer;
+
+    /* 모서리 라운딩 처리 */
+    border-radius: 15%;
+
+}
+
+
+/* 체크된 체크박스 뒤에 있는 label 태그 스타일 지정 */
+.chk:checked + label{
+    background-image: url(../../images/check.png); /* 배경 이미지 */
+    background-repeat: no-repeat; /* 배경 반복 X */
+    background-size: 27px; /* 배경 이미지 크기 */
+    background-position: -1px 4px; /* 이미지 위치(x,y) */
+                      /* 왼쪽 1px 이동, 아래로 4px 이동 */
+}
+
+/* checkbox를 존재는 하지만 보이지 않게 처리 */
+.chk{
+    display: none;
+}
+
+.test-4{ font-size: 28px; }
+
