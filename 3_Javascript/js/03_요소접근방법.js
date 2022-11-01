@@ -152,12 +152,22 @@ function readValue(){ // 입력된 값을 읽어들여 채팅창에 출력
 
 
     // 채팅이 정상적으로 입력된 경우에만 출력
-    if(){
-    // 채팅창에 입력된 값으로 채팅 추가
-    bg.innerHTML += "<p><span>"+input.value+"</span></p>"
+    if(input.value.trim().length > 0){
+        // 문자열.trim() : 문자열 좌우 공백을 제거 (중간 공백 제거 X)
+
+        // 채팅창에 입력된 값으로 채팅 추가
+        bg.innerHTML += "<p><span>"+input.value+"</span></p>"
+
+        // 스크롤을 제일 밑으로 내리기
+        // 요소.scrollTop : 요소 내부 현재 스크롤의 위치
+        // 요소.scrollTop = 위치 : 스크롤을 특정 위치로 이동
+        // 요소.scrollHeight : 스크롤의 전체 높이
+        bg.scrollTop = bg.scrollHeight;
+
+    } else { // 입력 X인 경우
+        alert("채팅 내용을 입력해주세요.")
+    }
 
     // 입력한 내용 삭제
     input.value = "";
-    }
-
 }
