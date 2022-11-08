@@ -88,7 +88,7 @@ function fnTest5(){
            // console.log( hobby[i].value );
 
            str += hobby[i].value + " "; // 값 누적
-           
+        
            count++; // 1 증가
         }
     }
