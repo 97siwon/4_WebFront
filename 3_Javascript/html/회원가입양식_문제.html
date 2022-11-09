@@ -204,22 +204,22 @@
     function validate(){
         
         // 방법1
-        // const gender = document.getElementsByName("gender"); // 요소 2개짜리 배열
+        const gender = document.getElementsByName("gender"); // 요소 2개짜리 배열
 
-        // // 라디오/체크박스.checked : 체크되면 true / 아니면 false
-        // if(!gender[0].checked && !gender[1].checked) {
-        //     alert("성별을 선택해주세요.");
-        //     return false;
-        // }
-
-        // 방법2
-        const gender = document.querySelector("input[name='gender']:ckecked");
-        // 체크된 성별 라디오 버튼만 얻어오기
-        
-        if(gender == null){
+        // 라디오/체크박스.checked : 체크되면 true / 아니면 false
+        if(!gender[0].checked && !gender[1].checked) {
             alert("성별을 선택해주세요.");
             return false;
         }
+
+        // // 방법2
+        // const gender = document.querySelector("input[name='gender']:ckecked");
+        // // 체크된 성별 라디오 버튼만 얻어오기
+        
+        // if(gender == null){
+        //     alert("성별을 선택해주세요.");
+        //     return false;
+        // }
         
         // 전화번호 정규식 검사
         const inputTel = document.getElementById("inputTel");
